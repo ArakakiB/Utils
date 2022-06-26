@@ -1,0 +1,13 @@
+- primeiro tenta instalar o jupyterlab 3. Para isso:
+conda uninstall jupyterlab
+conda install -c conda-forge jupyterlab=3
+
+- Se nao der, tenta instalar o nodejs:
+conda install -c conda-forge nodejs
+
+- Se ainda nao der, tenta: 
+jupyter labextension install @jupyter-widgets/jupyterlab-manager --no-build
+jupyter labextension install jupyterlab-plotly --no-build
+jupyter labextension install plotlywidget --no-build
+
+- Essas de cima tambem da pra instalar manual nas extensions do jupyter lab

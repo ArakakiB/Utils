@@ -1,0 +1,83 @@
+Previsto		Realizado	Diferença	
+
+3,34		3		-0,34
+4,18		4		-0,18
+3,00		3		0
+2,99		3		0,01
+4,51		4,5		-0,01
+5,18		4		-1,18
+8,18		4,5		-3,68
+
+
+Total de elementos: 7
+Total de diferença: -5,38
+Total da diferença em módulo: 5,4
+
+--------------- ME - Mean Error (Erro Médio) ---------------
+É a média de erro dos elementos.
+Soma das diferenças dividido pelo total de elementos.
+
+-5,38 / 7 = -0,7685
+
+Logicamente nesse caso quanto menor o resultado, melhor.
+Não é uma boa métrica porque os valores positivos e negativos se anulam.
+
+
+
+--------------- MAE - Mean Absolute Error (Erro Médio Absoluto) ---------------
+A diferença do MAE pro ME é que o MAE faz o calculo em módulo na soma das diferenças.
+Soma das diferenças em módulo dividido pela total de elementos.
+
+5,4 / 7 = 0,7714
+Quanto menor o resultado tambem é melhor.
+É uma métrica melhor que a ME.
+
+
+
+--------------- RMSE - Root Mean Squared Error (Erro médio quadrático da raiz) ---------------
+Soma da diferença dos elementos ao quadrado. Depois Raiz quadrada da soma da diferença dividido pelo numero de elementos.
+
+Ex: Vou fazer só com o primeiro elemento elevado ao quadrado
+3,34 - 3 = -0,34 <- Esse valor nós temos que elevar ao quadrado
+-0,34^2 = 0,1156
+Devemos fazer isso para todos os elementos e depois somar todos.
+Somando todos os resultados da diferença ao quadrado dos elementos, temos: 15,083
+Agora é só nós dividirmos pelo numero de elementos. Toda a divisão em uma raiz quadrada.
+RMSE = raiz(15,083 / 7)
+RMSE = 1,46
+
+Quanto mais próximo de 0 melhor.
+
+
+
+
+--------------- MPE - Mean Percentage Error (Média Percentual do Erro) ---------------
+
+Ex. de como calcular a diferença do elemento:
+(4 - 4,18) / 4 * 100 = -4,5
+
+Depois é só somar todas as diferenças dos elementos que teremos que teremos esse numero: -127
+E dividirmos pelo valor total de elementos: -127 / 7 = -18,14
+
+--------------- MAPE - Mean Absolute Percentage Error (Média Percentual Absoluta do Erro) ---------------
+A diferença do MAPE pro MPE é que o MAPE faz o calculo em módulo na soma das diferenças.
+ABS(4 - 4,18) / 4 * 100 = 4,5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

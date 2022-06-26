@@ -1,0 +1,82 @@
+Vamos abrir o cmd e ir ate o path que queremos
+Ou: podemos abrir o path manualmente e apertar com o botao direito e selecionar o git bash
+
+Configuração inicial de login
+git config --global user.name "Sam Smith"
+git config --global user.email sam@example.com
+
+Inicia o git no path
+git init
+
+Mostra o status do git
+git status
+
+add arquivo para o controle de versao (obrigatorio)
+git add "nome_arquivo"
+
+add todos os arquivos da pasta para controle de versao
+git add .
+
+colocando nosso arquivo em commit
+commit é quando "salvamos" a nossa nova versao (isso nao envia para o github)
+a mensagem geralmente é o que mudamos nessa versao
+git commit -m "mensagem"
+
+para definir o repositorio que vamos add os arquivos
+git remote add origin LinkDoRepositorio
+
+verifica qual o repositorio que estamos trabalhando
+git remote -v
+
+troca de repositorio
+git remote set-url origin NomeDoRepo
+
+para enviar os arquivos para o repositorio
+depois desse comando ele vai pedir nosso login e senha do github
+obs: master é a branch, poderiamos ter selecionado outra
+git push --set-upstream origin NomeBranch
+
+Mesmo que em cima, mas depois de configurado, é só usar esse comando (quando a branch ja esta na "nuvem")
+git push
+
+mostra as versoes/historico
+git reflog
+
+Esse comando vai para outra versao do cod.
+É só passarmos o comando a baixo com o ID da versao. Para vermos o ID das versões, podemos ver no browser no site do git, ou usando o comando git reflog
+git reset --hard IDdaVersao
+
+Ve as branchs que temos | a com asteristico é a que estamos no momento
+git branch
+
+Criar branch
+git branch NomeBranch
+
+criar uma branch com base em outra branch (como se fosse um copia e cola)
+git checkout -b NovaBranch BranchBase
+
+troca a branch
+git checkout NomeBranch
+
+Obs: Sempre que estiver em uma branch nova, voce precisa dar o comando git push --set-upstream origin NomeBranch
+
+Atualiza a ultima versao da nuvem para a sua maquina | é importante sempre fazermos isso
+git pull
+
+Merge de branchs
+é quando voce junta 2 branchs
+Pra isso, primeiro vamos ate a branch que receberá as atualizações, nesse caso a mastes
+git checkout master
+verifica se ta na master: git branch
+Obs: tambem é bom dar o: git pull | Esse comando vai atualizar os dados do projeto da nuvem, com o seu pc. Isso porque outra pessoa pode ter feito alguma alteração no cod
+    que esta na nuvem, no momento em que voce fez a alteração no seu. entao esse comando puxa a ultima atualização que esta na nuvem, para voce fazer o merge em cima dessa
+    ultima atualização.
+junta com o merge: git merge staging
+e depois: git push
+
+Pull request
+é quando voce da um push e os outros tem que aprovar
+
+Git ignore
+Aqui nos criamos um arquivo .gitignore e dentro deles vamos add os arquivos que não queremos passar para o nosso controle de versao (ex: senhas ou testes desnecessarios)
+touch .gitignore
