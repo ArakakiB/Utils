@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Araka/Dropbox/Estudos/Data%20Science/uteis/mlflow_demo/mlruns/0/3a5fdd545fb74499badf1b6612bb85dc/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+name: ''
+run_id: 3a5fdd545fb74499badf1b6612bb85dc
+run_uuid: 3a5fdd545fb74499badf1b6612bb85dc
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1636133166120
+status: 1
+tags: []
+user_id: Araka

@@ -1,0 +1,50 @@
+Para criar um novo env, é só olhar na documentacao do anaconda (escreve na internet 'create env conda' que voce vai achar).  
+https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html
+
+Mas vou deixar um resumo aqui:
+
+Para criar um env (é mais aconcelhavel criar do outro jeito)
+obs: esse cria com as libs default
+conda create --name myenv
+
+Para criar um env com uma versao especifica do python
+obs: esse cria sem lib nenhuma
+obs2: podemos criar so escrevendo python (sem a versao), que ele pega a ultima versao
+conda create -n myenv python=3.6
+
+Para visualizar os envs que possui
+obs: o asteristico diz qual env esta ativado no momento
+conda env list
+
+Para clonar um env
+conda create --name myclone --clone myenv
+
+Para ativar (usar no momento) um env
+conda activate myenv
+
+Para desativar um env
+Obs: Por padrao quando voce ativa um env ele sai do que voce estava antes
+conda deactivate
+
+Para remover um env
+obs: quando remove a pasta as vezes ainda fica no root da maquina. é bom excluir. Geramente fica em C:\Users\Araka\anaconda3\envs
+conda remove --name myenv --all
+
+
+OBS: Importante deixar registrado aqui que podemos criar envs com bibliotecas ja instaladas por default.
+https://docs.conda.io/projects/conda/en/latest/user-guide/configuration/use-condarc.html#config-add-default-pkgs
+
+-----------------------------------------------------------------------------------------------------------------
+
+Já para criar um kernel, sigua os passos a baixo:
+
+!pip install ipykernel
+
+para criar:
+python -m ipykernel install --user --name myenv --display-name "qqler_nome"
+
+para remover:
+jupyter kernelspec uninstall nomedobang
+
+para listar:
+jupyter kernelspec list

@@ -1,0 +1,2 @@
+- para baixar um arquivo igual o wget
+curl -o filename.file_ext raw-link-to-file

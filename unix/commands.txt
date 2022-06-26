@@ -1,0 +1,81 @@
+wget
+baixa um determinado arquivo com o seu devido link raw
+
+pwd
+mostra o path atual
+
+cd
+comando que vai até determinado path
+ex: cd home/some_folder
+
+cd /
+retorna para a raiz (root) do linux
+
+cd ..
+retorna 1 pasta
+
+> file_name.ext
+cria novo arquivo
+ex: > test.txt
+
+ls
+lista o local
+
+ls - l
+lista o local com informações de cada arquivo
+
+clear
+limpa o prompt
+
+rm filename
+remove um unico arquivo
+
+rm filename1 filename2 filename3
+remove varios arquivos
+
+rm *.pdf
+remove todos os arquivos com determinada extensao
+
+rm -r dirname
+remove um diretorio com arquivos
+
+rm -d dirname
+remove um diretorio sem arquivos
+
+
+df (diskfree)
+mostra a utilização do HD/SSD
+obs: dá pra colocar o -h no final do comando para mostrar mais agradavel
+
+free
+mostra a utilização da RAM
+obs: dá pra colocar o -h no final do comando para mostrar mais agradavel
+
+echo
+escreve algo na saida
+ex: echo "eae" (vai retornar 'eae')
+
+cat 
+lê um arquivo e printa na saida
+ex: cat arquivo.txt
+
+echo "qualquer frase" > nome_arquivo.txt
+cria e escreve em um arquivo
+
+wc -c
+conta caracteres
+wc -w
+conda palavras
+ex de uso do wc: cat out.txt | wc -c
+
+time shuf -n 100000 en.openfoodfacts.org.products.tsv >\
+10k.sample.en.openfoodfacts.org.products.tsv
+pega um arquivo grande e tras somente os primeiros 100k de registro e depois cria outro arquivo com esses 100k
+
+.bashrc
+esse é o local onde fica as configurações do unix
+aqui podemos add variaveis e executar diversos comandos
+
+apt-get install systemd
+
+coloca o unix no horario da internet

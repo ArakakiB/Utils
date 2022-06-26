@@ -1,0 +1,15 @@
+--- Ex simples de anaconda:
+
+# 8888:8888 é a porta
+# -v é de volume, significa que vamos compartilhar um volume (pasta) do pc local com o container
+# c:/shared_files:/home | antes do segundo ':' é o path do local, e depois é o path do container linux. Esse path vai ser o folder que vamos compartilhar
+# continuumio/anaconda3 é a imagem que vamos copiar do docker hub, lembrando que nesse exemplo to pegando essa que é do anaconda simples, mas poderia pegar outra qualquer de inumeras do docker hub
+docker run -i -t -p 8888:8888 -v c:/shared_files:/home continuumio/anaconda3 /bin/bash
+
+-- usando o jupyter
+Logo após esses comandos, já entramos no sistema linux do container.
+Entra na pasta que voce setou como compartilhada (nesse caso a home) e roda esse comando:
+jupyter notebook --ip='*' --port=8888 --no-browser --allow-root &
+
+depois é só ir no browser e digitar localhost/8888 que ele vai levar para o jupyter.
+Ele vai pedir o token, esse estará no terminal, só copiar e colar lá.
