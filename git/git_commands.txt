@@ -23,7 +23,7 @@ a mensagem geralmente é o que mudamos nessa versao
 git commit -m "mensagem"
 
 para definir o repositorio que vamos add os arquivos
-git remote add origin LinkDoRepositorio
+git remote add origin LinkDoRepositorioo
 
 verifica qual o repositorio que estamos trabalhando
 git remote -v
